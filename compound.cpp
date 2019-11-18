@@ -6,10 +6,16 @@
 //  Copyright © 2019 Stonnneee. All rights reserved.
 //
 #include <iostream>
+#include <iomanip>
 #include "compound.h"
 
 using namespace std;
 
+compound::compound() {
+    initial_mass = 0;
+    molar_mass = 0;
+    empirical =" ";
+}
 void compound::setempirical(string name){
     empirical = name;
 }
@@ -28,4 +34,9 @@ double compound::getinitial(){
 }
 string compound::getempirical(){
     return empirical;
+}
+void compound::print(){
+    cout << "You have " << setprecision(3) << getinitial() / getmolar()
+        << " mole(s).\n";
+    cout << "Name: " << getempirical() << "\n";
 }

@@ -12,16 +12,19 @@
 #include <string>
 using namespace std;
 
-class compound{ //compound class where values are stored
+class compound{
 public:
-    // setters
+    //constructor
+    compound();
+    //setters
     void setinitial(double);
     void setmolar(double);
     void setempirical(string);
     //getters
     double getinitial();
-    double getmolar();// molar mass will not change during our calculations
-    string getempirical(); // the name of the compound won't change either
+    double getmolar();
+    string getempirical();
+    void print();
 private:
     //variable intilization
     double initial_mass;

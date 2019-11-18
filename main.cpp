@@ -7,11 +7,9 @@
 
 #include <iostream>
 #include <string>
-#include <iomanip>
 using namespace std;
 
 #include "compound.h"
-
 
 int main() {
     compound cp;
@@ -30,9 +28,7 @@ int main() {
     cin >> m;
     cp.setmolar(m);
     
-    cout << "You have " << setprecision(3) << cp.getinitial()/cp.getmolar()
-        << " mole(s).\n";
-    cout << "Name: " << cp.getempirical() << "\n";
+    cp.print();
     
     return 0;
 }
